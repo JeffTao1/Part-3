@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class three : movementplayer
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void CALLING()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("FOFOFO");
     }
 }

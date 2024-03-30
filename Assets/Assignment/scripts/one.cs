@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class one : movementplayer
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void CALLING()
     {
-        
+
+        Debug.Log("wowow");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
