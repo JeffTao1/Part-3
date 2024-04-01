@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class movementplayer : MonoBehaviour
 {
-    public GameObject home;
+    public GameObject homet;
     public float speed ;
     bool arrived = false;
     Coroutine coroutine;
@@ -12,21 +12,26 @@ public class movementplayer : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        if (Input.GetMouseButton(0) && coroutine == null) { 
+        if (Input.GetMouseButton(0) && coroutine == null) { //when pressed mouse then it move
 
-            coroutine=StartCoroutine(YOUPAPA()); 
+            coroutine=StartCoroutine(YOUPA()); // after pressed it will start working on the youpa
         }
     }
-    IEnumerator YOUPAPA()
+    IEnumerator YOUPA()
     {
 
-            while (arrived)
+            while (arrived==false)
             {
-                transform.position = Vector2.MoveTowards(transform.position, home.transform.position, speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, homet.transform.position, speed * Time.deltaTime);
+                if((homet.transform.position - transform.position).magnitude < 0.1)//when the animals is arrived then they will shouting
+            {
+                    arrived = true;
+                mark.setmark(mark.Mark + 1);// and record how many animals there are
+            }
                 yield return null;
             }
             CALLING();
-            yield return new WaitForSeconds(4);
+            
 
     }
     protected virtual void CALLING()

@@ -7,6 +7,6 @@ public class two : movementplayer
     protected override void CALLING()
     {
 
-        Debug.Log("MOMOMO");
+        Debug.Log("MOMOMO"); // make the cat shouting
     }
 }

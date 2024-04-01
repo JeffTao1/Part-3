@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class one : movementplayer
 {
-    protected override void CALLING()
+    protected override void CALLING() // make the dog shouting
     {
 
         Debug.Log("wowow");
