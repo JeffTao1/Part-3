@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class one : movementplayer
 {
+     void Start()
+    {
+        homet = GameObject.Find("Homeone dog");
+    }
     protected override void CALLING() // make the dog shouting
     {
 

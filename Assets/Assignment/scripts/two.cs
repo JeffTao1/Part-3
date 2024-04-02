@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class two : movementplayer
 {
+     void Start()
+    {
+        homet = GameObject.Find("Homeone cat");
+    }
     protected override void CALLING()
     {
 

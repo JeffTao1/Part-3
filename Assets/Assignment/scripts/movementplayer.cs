@@ -7,8 +7,8 @@ public class movementplayer : MonoBehaviour
     public GameObject homet;
     public float speed ;
     bool arrived = false;
-    Coroutine coroutine;
-    
+    Coroutine coroutine; //wait and do later
+
     // Update is called once per frame
     public void Update()
     {
@@ -20,10 +20,10 @@ public class movementplayer : MonoBehaviour
     IEnumerator YOUPA()
     {
 
-            while (arrived==false)
+            while (arrived==false)//the aniaml is not arrived so not increase marks
             {
-                transform.position = Vector2.MoveTowards(transform.position, homet.transform.position, speed * Time.deltaTime);
-                if((homet.transform.position - transform.position).magnitude < 0.1)//when the animals is arrived then they will shouting
+                transform.position = Vector2.MoveTowards(transform.position, homet.transform.position, speed * Time.deltaTime);// the animal can find the home base on the home's position.
+                if((homet.transform.position - transform.position).magnitude < 0.1)//when the animals is arrived then they will increase marks
             {
                     arrived = true;
                 mark.setmark(mark.Mark + 1);// and record how many animals there are
